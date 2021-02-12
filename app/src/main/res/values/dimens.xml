@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Style -->
+    <!-- Typography -->
+    <dimen name="typography_button1">12sp</dimen>
+    <dimen name="typography_button2">15sp</dimen>
+    <dimen name="typography_input">15sp</dimen>
+    <dimen name="typography_caption">13sp</dimen>
+    <dimen name="typography_body1">15sp</dimen>
+    <dimen name="typography_body2">12sp</dimen>
+    <dimen name="typography_subheading">17sp</dimen>
+    <dimen name="typography_title">21sp</dimen>
+    <dimen name="typography_headline">24sp</dimen>
+    <dimen name="typography_display1">34sp</dimen>
+    <dimen name="typography_display2">45sp</dimen>
+    <dimen name="typography_display3">56sp</dimen>
+    <dimen name="typography_display4">112sp</dimen>
+
+    <!-- Margin -->
+    <dimen name="margin_tiny">4dp</dimen>
+    <dimen name="margin_small">8dp</dimen>
+    <dimen name="margin_medium">16dp</dimen>
+    <dimen name="margin_large">32dp</dimen>
+    <dimen name="margin_huge">64dp</dimen>
+    <dimen name="margin_toolbar">55dp</dimen>
+    <dimen name="margin_sm">10dp</dimen>
+    <dimen name="margin_searchBar">75dp</dimen>
+    <dimen name="margin_tiny_n">-4dp</dimen>
+    <dimen name="margin_image_text1">40dp</dimen>
+    <dimen name="margin_image_text2">128dp</dimen>
+    <dimen name="margin_sm1">15dp</dimen>
+    <dimen name="margin_ml">20dp</dimen>
+    <dimen name="margin_mh">32dp</dimen>
+    <dimen name="divider_margin">25dp</dimen>
+    <dimen name="divider_height">2dp</dimen>
+
+
+    <!-- Padding -->
+    <dimen name="padding_small">8dp</dimen>
+    <dimen name="padding_medium">16dp</dimen>
+    <dimen name="padding_sm">10dp</dimen>
+    <dimen name="padding_tiny">4dp</dimen>
+    <dimen name="padding_mh">32dp</dimen>
+
+    <!--font Size -->
+    <dimen name="fontSize_m">18sp</dimen>
+    <dimen name="fontSize_mh">20sp</dimen>
+    <dimen name="fontSize_h">24sp</dimen>
+    <dimen name="fontSize_h1">28sp</dimen>
+    <dimen name="fontSize_s">12sp</dimen>
+    <dimen name="fontSize_sh">14sp</dimen>
+    <dimen name="fontSize_sh1">16sp</dimen>
+
+
+    <!-- Layout -->
+
+    <!-- Metrics & Key Lines -->
+
+    <!-- Structure -->
+
+    <!-- Responsive UI -->
+
+    <!-- Components -->
+
+    <!-- Bottom sheets -->
+
+    <!-- Bottom navigation -->
+
+    <!-- Buttons -->
+    <dimen name="button_height1">36dp</dimen>
+    <dimen name="button_height2">48dp</dimen>
+    <dimen name="button_dense_height">32dp</dimen>
+    <dimen name="button_min_width">88dp</dimen>
+    <dimen name="button_touchable_target_height">48dp</dimen>
+    <dimen name="button_corner_radius1">5dp</dimen>
+    <dimen name="button_corner_radius2">30dp</dimen>
+    <dimen name="button_padding">1dp</dimen>
+    <dimen name="button_text_left_and_right_padding">16dp</dimen>
+    <dimen name="button_text_top_and_bottom_padding">8dp</dimen>
+    <dimen name="button_text_size">14pt</dimen>
+    <dimen name="button_dense_text_size">13pt</dimen>
+    <dimen name="button_image_and_text_padding">8dp</dimen>
+
+    <!-- Cards -->
+    <dimen name="card_padding">30dp</dimen>
+</resources>

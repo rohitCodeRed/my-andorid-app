@@ -1,0 +1,26 @@
+<resources>
+
+    <!-- Declare custom theme attributes that allow changing which styles are
+         used for button bars depending on the API level.
+         ?android:attr/buttonBarStyle is new as of API 11 so this is
+         necessary to support previous API levels. -->
+    <declare-styleable name="ButtonBarContainerTheme">
+        <attr name="metaButtonBarStyle" format="reference" />
+        <attr name="metaButtonBarButtonStyle" format="reference" />
+    </declare-styleable>
+    
+    <declare-styleable name="SwipeableViewPager">
+        <attr name="swipeable" format="boolean"/>
+    </declare-styleable>
+
+    <declare-styleable name="SpringDotsIndicator">
+        <attr name="dotsColor" format="string"/>
+        <attr name="dotsSize" format="string"/>
+        <attr name="dotsSpacing" format="string"/>
+        <attr name="dotsCornerRadius" format="string"/>
+        <attr name="dotsStrokeWidth" format="string"/>
+        <attr name="dotsStrokeColor" format="string"/>
+        <attr name="stiffness" format="string"/>
+        <attr name="dampingRatio" format="string"/>
+    </declare-styleable>
+</resources>
