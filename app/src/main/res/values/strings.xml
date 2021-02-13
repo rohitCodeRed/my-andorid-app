@@ -10,7 +10,7 @@
     <string name="fb_login_protocol_scheme">fb695989350768444</string>
 
     <!-- Text View -->
-    <string name="label_welcome">Welcome to\n<font size="40">My <b><font fgcolor='#d1272a'>PLDT</font> <font fgcolor='#42b02b'>Smart</font></b></font></string>
+    <string name="label_welcome">Welcome to\n<font size="40"><b><font fgcolor='#d1272a'>MY App</font></b></font></string>
     <string name="label_password_description"><i>*Password should have at least 8 characters and must contain a combination of letters and numbers</i></string>
     <string name="label_terms_and_conditions_title">Terms and Conditions</string>
     <string name="label_terms_and_conditions_description">By accepting the terms of service of our\n<u><font fgcolor='#43B049'>Privacy Policy</font></u>, you agree to:</string>

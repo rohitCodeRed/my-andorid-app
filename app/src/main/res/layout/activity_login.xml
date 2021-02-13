@@ -127,20 +127,7 @@
         app:layout_constraintTop_toBottomOf="@+id/tvDivider"> -->
 
 
-
-    <com.facebook.login.widget.LoginButton
-        android:id="@+id/btnFacebookLogin"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:layout_gravity="center_horizontal"
-        android:layout_margin="@dimen/button_text_top_and_bottom_padding"
-        app:layout_constraintEnd_toEndOf="@+id/btnSignin"
-        app:layout_constraintStart_toStartOf="@+id/btnSignin"
-        app:layout_constraintTop_toBottomOf="@+id/tvDivider"
-        />
-
-        <!--
+    <!--
         <ImageView
             android:id="@+id/ivFacebook"
             android:layout_width="wrap_content"
@@ -166,41 +153,50 @@
             -->
     <!-- </RelativeLayout> -->
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/rlGoogle"
-        android:layout_width="201dp"
-        android:layout_height="41dp"
-        android:layout_marginTop="8dp"
-        android:background="@drawable/button_rounded"
-        android:backgroundTint="@color/white"
-        app:layout_constraintEnd_toEndOf="@+id/btnFacebookLogin"
-        app:layout_constraintStart_toStartOf="@+id/btnFacebookLogin"
-        app:layout_constraintTop_toBottomOf="@+id/btnFacebookLogin">
+<!--    <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--        android:id="@+id/rlGoogle"-->
+<!--        android:layout_width="201dp"-->
+<!--        android:layout_height="41dp"-->
+<!--        android:layout_marginTop="8dp"-->
+<!--        android:background="@drawable/button_rounded"-->
+<!--        android:backgroundTint="@color/white"-->
+<!--        app:layout_constraintEnd_toEndOf="@+id/btnFacebookLogin"-->
+<!--        app:layout_constraintStart_toStartOf="@+id/btnFacebookLogin"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/btnFacebookLogin">-->
 
-        <ImageView
-            android:id="@+id/ivGoogle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/button_text_left_and_right_padding"
-            android:layout_marginTop="@dimen/button_text_top_and_bottom_padding"
-            android:layout_marginRight="@dimen/button_image_and_text_padding"
-            android:layout_marginBottom="@dimen/button_text_top_and_bottom_padding"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/ic_google" />
+<!--        <ImageView-->
+<!--            android:id="@+id/ivGoogle"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginLeft="@dimen/button_text_left_and_right_padding"-->
+<!--            android:layout_marginTop="@dimen/button_text_top_and_bottom_padding"-->
+<!--            android:layout_marginRight="@dimen/button_image_and_text_padding"-->
+<!--            android:layout_marginBottom="@dimen/button_text_top_and_bottom_padding"-->
+<!--            app:layout_constraintBottom_toBottomOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toTopOf="parent"-->
+<!--            app:srcCompat="@drawable/ic_google" />-->
 
-        <TextView
-            android:id="@+id/tvGoogle"
-            android:layout_width="140dp"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="4dp"
-            android:layout_marginTop="8dp"
-            android:text="@string/login_google_button_text"
-            android:textColor="@color/grey_800"
-            android:textSize="@dimen/typography_button2"
-            app:layout_constraintLeft_toRightOf="@+id/ivGoogle"
-            app:layout_constraintTop_toTopOf="parent" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
+<!--        <TextView-->
+<!--            android:id="@+id/tvGoogle"-->
+<!--            android:layout_width="140dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginLeft="4dp"-->
+<!--            android:layout_marginTop="8dp"-->
+<!--            android:text="@string/login_google_button_text"-->
+<!--            android:textColor="@color/grey_800"-->
+<!--            android:textSize="@dimen/typography_button2"-->
+<!--            app:layout_constraintLeft_toRightOf="@+id/ivGoogle"-->
+<!--            app:layout_constraintTop_toTopOf="parent" />-->
+<!--    </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+    <com.google.android.gms.common.SignInButton
+        android:id="@+id/sign_in_button"
+        android:layout_width="109dp"
+        android:layout_height="47dp"
+        android:layout_marginTop="48dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnSignin" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

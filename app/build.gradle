@@ -47,12 +47,10 @@ dependencies {
 
     // Social media components
     implementation 'com.google.android.gms:play-services-auth:19.0.0'
-    implementation 'com.facebook.android:facebook-login:4.42.0'
-    implementation 'com.facebook.android:facebook-android-sdk:[4,5)'
 
     // Third party components
-    implementation 'com.squareup.retrofit2:retrofit:2.4.0'
-    implementation 'com.squareup.retrofit2:converter-gson:2.4.0'
+//    implementation 'com.squareup.retrofit2:retrofit:2.4.0'
+//    implementation 'com.squareup.retrofit2:converter-gson:2.4.0'
 
     testImplementation 'junit:junit:4.13.1'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
