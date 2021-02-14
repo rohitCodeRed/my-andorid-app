@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/option_all"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/button_border_unset"
+            android:fontFamily="@font/montserrat"
+            android:onClick="brandButtonOnClick"
+            android:text="@string/option_all"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/option_smart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/button_border_unset"
+            android:fontFamily="@font/montserrat"
+            android:onClick="brandButtonOnClick"
+            android:text="@string/option_smart"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/option_pldt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/button_border_unset"
+            android:fontFamily="@font/montserrat"
+            android:onClick="brandButtonOnClick"
+            android:text="@string/option_pldt"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <SearchView
+        android:id="@+id/searchBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="75dp"
+        android:queryHint="Search"
+        android:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/textSearch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/searchBar"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="10dp"
+        android:layout_toEndOf="@+id/searchBar"
+        android:text="Search"
+        android:textSize="18sp"
+        android:visibility="invisible" />
+
+    <View
+        android:id="@+id/divider2"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@+id/textSearch"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="25dp"
+        android:background="@android:color/darker_gray" />
+
+</RelativeLayout>

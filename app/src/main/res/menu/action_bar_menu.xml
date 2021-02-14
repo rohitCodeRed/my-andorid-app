@@ -1,0 +1,9 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/action_notification"
+        android:title="@string/notification_bar"
+        app:showAsAction="ifRoom"/>
+
+</menu>

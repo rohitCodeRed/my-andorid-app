@@ -3,6 +3,7 @@
     <style name="AppBaseTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- App Color -->
         <item name="colorPrimary">@color/smartPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/grey_500</item>
     </style>
 
