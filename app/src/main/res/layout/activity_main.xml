@@ -38,7 +38,6 @@
         android:layout_height="match_parent"
         android:layout_gravity="start"
         android:fitsSystemWindows="true"
-        app:menu="@menu/drawable_menu"
-        app:headerLayout="@layout/drawable_header"/>
+        app:menu="@menu/drawable_menu"/>
 
 </androidx.drawerlayout.widget.DrawerLayout>

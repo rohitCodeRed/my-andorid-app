@@ -1,13 +1,23 @@
 package com.example.my_android_app;
 
+import android.content.ActivityNotFoundException;
 import android.content.Intent;
 
+import android.graphics.Bitmap;
+import android.graphics.Canvas;
+import android.graphics.Paint;
+import android.graphics.PorterDuff;
+import android.graphics.PorterDuffXfermode;
+import android.graphics.Rect;
+import android.graphics.RectF;
 import android.os.Bundle;
+import android.provider.MediaStore;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.ScrollView;
 import android.widget.SearchView;
@@ -45,6 +55,7 @@ public class MainActivity extends AppCompatActivity {
     public static final String ACCOUNT_ID = "0";
     public static final String EMAIL_ID ="none";
     public static final String TAG = "MyApp";
+    static final int REQUEST_IMAGE_CAPTURE = 1;
 
     private static final String ALL ="ALL";
     private static final String PLDT ="PLDT";
@@ -58,6 +69,7 @@ public class MainActivity extends AppCompatActivity {
     private Button bOptionSMART;
     private Button bOptionPLDT;
     private ProgressBar pbView;
+    private ImageView pImageView;
 
     private TextView tvTextSearch;
     private SearchView svSearch;
@@ -78,6 +90,8 @@ public class MainActivity extends AppCompatActivity {
 
         //rtList is instance of class RecordTransactionList, which record all the json data in list.
         this.rtList = new RecordTransactionList();
+//        pImageView = findViewById(R.id.profile_foreground_image);
+
 
         initializeNavigationDrawerLayout();
 
@@ -188,14 +202,34 @@ public class MainActivity extends AppCompatActivity {
 
 
     private void initializeNavigationViewListener(){
+        //pImageView = (ImageView) navigationView.getHeaderView(1);
+        View headerLayout =
+                navigationView.inflateHeaderView(R.layout.drawable_header);
+        this.pImageView = headerLayout.findViewById(R.id.profile_foreground_image);
+
         navigationView.setNavigationItemSelectedListener(
                 new NavigationView.OnNavigationItemSelectedListener() {
                     @Override
                     public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
                         // set item as selected to persist highlight
                         menuItem.setChecked(true);
-                        // close drawer when item is tapped
-                        mDrawerLayout.closeDrawers();
+
+
+                        switch (menuItem.getItemId()) {
+                            case R.id.nav_upload_profile:
+                                    dispatchTakePictureIntent();
+                                break;
+                            case R.id.nav_transaction_list:
+                                    mDrawerLayout.closeDrawers();
+                                    break;
+                            case R.id.nav_animation_view:
+                                    mDrawerLayout.closeDrawers();
+                                break;
+                            default:
+                                //todo..
+
+                        }
+
 
                         // Add code here to update the UI based on the item selected
                         // For example, swap UI fragments here
@@ -203,6 +237,49 @@ public class MainActivity extends AppCompatActivity {
                         return true;
                     }
                 });
+    }
+
+    //capture photo event
+    public void dispatchTakePictureIntent() {
+        Intent takePictureIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+        try {
+            startActivityForResult(takePictureIntent, REQUEST_IMAGE_CAPTURE);
+        } catch (ActivityNotFoundException e) {
+            // display error state to the user
+        }
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode == REQUEST_IMAGE_CAPTURE && resultCode == RESULT_OK) {
+            Bundle extras = data.getExtras();
+            Bitmap imageBitmap = (Bitmap) extras.get("data");
+            Bitmap roundBitMap = getRoundedCornerBitmap(imageBitmap, 96);
+            this.pImageView.setImageBitmap(roundBitMap);
+        }
+    }
+
+    public static Bitmap getRoundedCornerBitmap(Bitmap bitmap, int pixels) {
+        Bitmap output = Bitmap.createBitmap(bitmap.getWidth(), bitmap
+                .getHeight(), Bitmap.Config.ARGB_8888);
+        Canvas canvas = new Canvas(output);
+
+        final int color = 0xff424242;
+        final Paint paint = new Paint();
+        final Rect rect = new Rect(0, 0, bitmap.getWidth(), bitmap.getHeight());
+        final RectF rectF = new RectF(rect);
+        final float roundPx = pixels;
+
+        paint.setAntiAlias(true);
+        canvas.drawARGB(0, 0, 0, 0);
+        paint.setColor(color);
+        canvas.drawRoundRect(rectF, roundPx, roundPx, paint);
+
+        paint.setXfermode(new PorterDuffXfermode(PorterDuff.Mode.SRC_IN));
+        canvas.drawBitmap(bitmap, rect, rect, paint);
+
+        return output;
     }
 
 

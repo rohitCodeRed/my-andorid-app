@@ -1,17 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relativeLayout"
     android:layout_width="match_parent"
-    android:layout_height="192dp"
-    android:background="?attr/colorPrimaryDark"
-    android:padding="16dp"
-    android:theme="@style/ThemeOverlay.AppCompat.Dark"
+    android:layout_height="300dp"
+    android:gravity="bottom"
     android:orientation="vertical"
-    android:gravity="bottom">
+    android:theme="@style/ThemeOverlay.AppCompat.Light">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="My header title"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body1"/>
+    <ImageView
+        android:id="@+id/profile_background_image"
+        android:layout_width="432dp"
+        android:layout_height="432dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@mipmap/ic_profile_drawer_foreground" />
 
-</LinearLayout>
+    <ImageView
+        android:id="@+id/profile_foreground_image"
+        android:layout_width="96dp"
+        android:layout_height="96dp"
+        android:layout_marginTop="176dp"
+        android:layout_marginEnd="28dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:scaleType="fitXY"
+        app:srcCompat="@mipmap/ic_profile_drawer" />
+</androidx.constraintlayout.widget.ConstraintLayout>

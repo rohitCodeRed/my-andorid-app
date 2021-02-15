@@ -2,21 +2,17 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android" >
     <group android:checkableBehavior="single">
         <item
-            android:id="@+id/nav_camera"
+            android:id="@+id/nav_upload_profile"
             android:icon="@drawable/ic_add_a_photo_black_24dp"
-            android:title="Import" />
+            android:title="Upload Profile" />
         <item
-            android:id="@+id/nav_gallery"
-            android:icon="@drawable/ic_collections_black_24dp"
-            android:title="Gallery" />
+            android:id="@+id/nav_transaction_list"
+            android:icon="@drawable/ic_menu_black_24dp"
+            android:title="Transaction List" />
         <item
-            android:id="@+id/nav_slideshow"
+            android:id="@+id/nav_animation_view"
             android:icon="@drawable/ic_slideshow_black_24dp"
-            android:title="Slide show" />
-        <item
-            android:id="@+id/nav_manage"
-            android:icon="@drawable/ic_build_black_24dp"
-            android:title="Tools" />
+            android:title="Animation View" />
     </group>
 </menu>
 
