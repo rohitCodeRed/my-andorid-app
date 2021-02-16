@@ -108,4 +108,6 @@
     <string name="image_text_prefix">Hey,</string>
     <string name="image_user_name">Dominic!</string>
     <string name="notification_bar">bell</string>
+
+    <string name="server_client_id">649689455351-c8spjo6mqgqhkn5p8gt31eh14tjm8si0.apps.googleusercontent.com</string>
 </resources>

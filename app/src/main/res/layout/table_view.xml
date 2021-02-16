@@ -7,7 +7,6 @@
     style="@android:style/Widget.DeviceDefault.Light.ScrollView"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_marginTop="50dp"
     android:scrollbarStyle="outsideOverlay">
 
     <LinearLayout
@@ -39,39 +38,40 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp" />
         </RelativeLayout>
-
-        <include
-            layout="@layout/enrolled_account"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp" />
-
-
-        <TableLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-
-            <TableRow>
-                <include
-                    layout="@layout/button_search_layout"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
-            </TableRow>
-
-            <include
-                layout="@layout/recycler_view"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
-
-        </TableLayout>
-        <ProgressBar
-            android:id="@+id/main_progress"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:visibility="gone"/>
     </LinearLayout>
-
 </androidx.core.widget.NestedScrollView>
+
+<!--        <include-->
+<!--            layout="@layout/enrolled_account"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginTop="10dp" />-->
+
+
+<!--        <TableLayout-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content">-->
+
+<!--            <TableRow>-->
+<!--                <include-->
+<!--                    layout="@layout/button_search_layout"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content" />-->
+<!--            </TableRow>-->
+
+<!--            <include-->
+<!--                layout="@layout/recycler_view"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content" />-->
+
+<!--        </TableLayout>-->
+<!--        <ProgressBar-->
+<!--            android:id="@+id/main_progress"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_gravity="center"-->
+<!--            android:visibility="gone"/>-->
+
+
 
 

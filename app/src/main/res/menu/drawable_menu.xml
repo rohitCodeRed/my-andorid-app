@@ -13,6 +13,10 @@
             android:id="@+id/nav_animation_view"
             android:icon="@drawable/ic_slideshow_black_24dp"
             android:title="Animation View" />
+        <item
+            android:id="@+id/log_out"
+            android:icon="@drawable/ic_baseline_lock_open_24"
+            android:title="Log Out" />
     </group>
 </menu>
 

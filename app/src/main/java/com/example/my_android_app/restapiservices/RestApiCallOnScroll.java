@@ -61,6 +61,7 @@ public class RestApiCallOnScroll extends AsyncTask<String, Integer, String> {
 
         //update the jsonObj
         try{
+            Thread.sleep(600);
             jsonObj = new JSONObject(jStr);
 
             //List of transactionInfo are coming from ReadJsonAndReturnList.getUpdatedListAtScroll.
@@ -68,9 +69,12 @@ public class RestApiCallOnScroll extends AsyncTask<String, Integer, String> {
 
             //Call RecordTransactionList.appendList function to append the transactionList in RecordTransactionList class .
             csList.appendList(chunkList);
+            //Thread.sleep(600);
         }
-        catch(JSONException e){
-            e.printStackTrace();
+        catch(JSONException | InterruptedException e){
+            //e.printStackTrace();
+            csList.appendList(null);
+            chunkList = null;
         }
 
 
@@ -88,7 +92,7 @@ public class RestApiCallOnScroll extends AsyncTask<String, Integer, String> {
             is.close();
             json = new String(buffer, "UTF-8");
         } catch (IOException ex) {
-            ex.printStackTrace();
+            //ex.printStackTrace();
             return null;
         }
         Log.d(TAG, "loadJSONFromAsset: " + json);
