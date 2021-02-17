@@ -14,51 +14,6 @@ import java.util.Objects;
 public class ReadJsonAndReturnList {
 
     private static final String TAG = "MyApp";
-
-    //Return the transaction info list based upon json data
-    //Basically it return the list of TransactionInfo object for static login info card, which created from fetching json data.
-    public List<TransactionInfo> getTransactionListLoggedInAccount(JSONObject json){
-        List<TransactionInfo> result = new ArrayList<>();
-        TransactionInfo ci = new TransactionInfo();
-
-        try{
-
-            JSONObject loggedInAccount = json.getJSONObject("LoggedInAccount");
-
-            ci.brandType =loggedInAccount.getString("BrandType");
-            ci.accountType=loggedInAccount.getString("AccountType");
-            //ci.paymentDue=loggedInAccount.getString("PaymentDue");
-           //ci.totalAmount= loggedInAccount.getInt("TotalAmount");
-
-            String acctType = loggedInAccount.getString("AccountType");
-            //Log.d(TAG, "getTransactionListSingle: list......"+acctType );
-
-            if(Objects.equals(acctType, "Postpaid")  ){
-                //Log.d(TAG, "getTransactionListSingle: list......"+loggedInAccount.getInt("TotalAmount") );
-                ci.paymentDue=loggedInAccount.getString("PaymentDue");
-                ci.totalAmount= loggedInAccount.getInt("TotalAmount");
-            }
-            else if(Objects.equals(acctType, "Prepaid")){
-                ci.totalAmount= loggedInAccount.getInt("TotalAmount");
-            }
-
-            ci.accountName = loggedInAccount.getString("AccountName");
-            ci.userMobileNumber = json.getString("MobileNumber");
-            ci.userAccountId = json.getInt("AccountId");
-            ci.userEmailId = json.getString("EmailAddress");
-            ci.userName=json.getString("Name");
-
-            result.add(ci);
-
-        }catch(JSONException e){
-            e.printStackTrace();
-            Log.d(TAG, "getTransactionListSingle: list"+json);
-        }
-
-        return result;
-    }
-
-
     //Basically it return the list of TransactionInfo object for recycler view, which created from fetching json data.
 
     public List<TransactionInfo> getTransactionListForRecyclerView(JSONObject json){

@@ -15,55 +15,57 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.List;
 
-public class RestApiCallOnLogin extends AsyncTask<String, Integer, String> {
+public class RestApiCallOnBrandName extends AsyncTask<String, Integer, String> {
 
     private static final String TAG = "MyApp";
     public InputStream in;
-
     private Activity activity;
-
-
     private ReadJsonAndReturnList jsData;
     private RecordTransactionList csList;
     private final RestApiCallBack callBack;
     private List<TransactionInfo> transactionList;
 
-    /*---------------------RestApiCallOnLogin----------------------*/
+
+    /*---------------------RestApiCallOnBrandType----------------------*/
     //This class is extended with AsyncTask.
     //Constructor Parameters are Activity and interface RestApiCallBack.
     //Activity.getAssets() is used for fetching files from assets folder.
 
-    public RestApiCallOnLogin(Activity activity, RestApiCallBack callBack){
-        this.activity = activity;
-        this.callBack = callBack;
+    public RestApiCallOnBrandName(Activity avtivity, RestApiCallBack callBack){
+
+        this.activity = avtivity;
         this.jsData = new ReadJsonAndReturnList();
         this.csList = new RecordTransactionList();
+        this.callBack = callBack;
+
     }
-
-
 
     @Override
     protected void onPreExecute() {
+
         //Setup precondition to execute some task
     }
 
     @Override
     protected String doInBackground(String... params) {
+
         JSONObject jsonObj;
-        //publishProgress (1);
+        //publishProgress (10);
 
         //load the json file or by api call...
-        String jStr = loadJSONFromAsset();
+        String filename = getJsonFileName(params[0]);
+        String jStr = loadJSONFromAsset(filename);
+
 
         //update the jsonObj
         try{
             jsonObj = new JSONObject(jStr);
 
-            //List of transactionInfo are coming from ReadJsonAndReturnList.getTransactionListLoggedInAccount.
-            transactionList = this.jsData.getTransactionListLoggedInAccount(jsonObj);
+            //List of transactionInfo are coming from ReadJsonAndReturnList.getTransactionListForRecyclerView
+            transactionList = this.jsData.getTransactionListForRecyclerView(jsonObj);
 
-            // Call RecordTransactionList.updateLoginList function to update the loginInfo in RecordTransactionList class.
-            csList.updateLoginList(transactionList);
+            // Call RecordTransactionList.updateTransactionInfoList function to update the transactionList in RecordTransactionList class .
+            csList.updateTransactionInfoList(transactionList);
         }
         catch(JSONException e){
             e.printStackTrace();
@@ -74,10 +76,10 @@ public class RestApiCallOnLogin extends AsyncTask<String, Integer, String> {
         return "";
     }
 
-
     @Override
     protected void onProgressUpdate(Integer... values) {
         //Update the progress of current task
+        //setProgressPercent(progress[0]);
     }
 
     @Override
@@ -91,10 +93,10 @@ public class RestApiCallOnLogin extends AsyncTask<String, Integer, String> {
 
 
     /*---------------- Read json from assets folder start----------------------*/
-    private String loadJSONFromAsset() {
+    private String loadJSONFromAsset(String filename) {
         String json;
         try {
-            InputStream is = this.activity.getAssets().open("login_data.json");
+            InputStream is = this.activity.getAssets().open(filename);
             int size = is.available();
             byte[] buffer = new byte[size];
             is.read(buffer);
@@ -108,6 +110,13 @@ public class RestApiCallOnLogin extends AsyncTask<String, Integer, String> {
         return json;
     }
     /*---------------- Read json from assets folder End----------------------*/
+
+
+
+    private String getJsonFileName(String brandName){
+        brandName = brandName+"_current_index_0"+".json";
+        return brandName;
+    }
 
 
 

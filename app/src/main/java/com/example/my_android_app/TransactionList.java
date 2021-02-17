@@ -1,38 +1,29 @@
 package com.example.my_android_app;
 
 import android.content.Intent;
-import android.os.Build;
 import android.os.Bundle;
-import android.os.Handler;
-import android.os.Looper;
-import android.util.Log;
-import android.view.MotionEvent;
 import android.view.View;
 import android.widget.ProgressBar;
-import android.widget.ScrollView;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.widget.NestedScrollView;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.my_android_app.jsonreadandreturnlist.RecordTransactionList;
 import com.example.my_android_app.restapiservices.RestApiCallBack;
-import com.example.my_android_app.restapiservices.RestApiCallOnBrandType;
+import com.example.my_android_app.restapiservices.RestApiCallOnBrandName;
 import com.example.my_android_app.restapiservices.RestApiCallOnScroll;
 import com.example.my_android_app.transactionadapter.ButtonClickListener;
 import com.example.my_android_app.transactionadapter.TransactionAdapter;
 import com.example.my_android_app.transactionadapter.TransactionInfo;
 
 import java.util.List;
-import java.util.Objects;
 
 public class TransactionList extends AppCompatActivity {
     private static final String TAG ="Transaction activity" ;
-    private static String brandFilter = "ALL";
+    private static String brandName = "BRAND";
 
     public static final String ACCOUNT_TYPE = "none";
     public static final String MOBILE_NUMBER ="none";
@@ -59,7 +50,7 @@ public class TransactionList extends AppCompatActivity {
         initializeToolbar();
         initializeScrollEvent();
         initializeAdapterView();
-        setApiCallOnBrandTypeApi(brandFilter);
+        setApiCallOnBrandTypeApi(brandName);
 
     }
     
@@ -92,7 +83,7 @@ public class TransactionList extends AppCompatActivity {
                             if ((visibleItemCount + pastVisibleItems) >= totalItemCount) {
                                 //Log.w(TAG, String.format("onScrollChange: load more..%d", totalItemCount));
                                 if(isLoaded == false){
-                                    OnScrollApi(brandFilter,totalItemCount);
+                                    OnScrollApi(brandName,totalItemCount);
                                 }
                             }
                         }catch (NullPointerException e){
@@ -205,7 +196,7 @@ public class TransactionList extends AppCompatActivity {
     private void setApiCallOnBrandTypeApi(String name){
         //RestApiCallOnBrandType is a async task, which fetch data related to brand Name from assets folder json files.
         //After onPostExecute method, it trigger the interface 'RestApiCallBack'.
-        RestApiCallOnBrandType apiCallOnBrandType = new RestApiCallOnBrandType(this, new RestApiCallBack() {
+        RestApiCallOnBrandName apiCallOnBrandType = new RestApiCallOnBrandName(this, new RestApiCallBack() {
             @Override
             public void onCompleteProcess(List<TransactionInfo> result) {
                 if(result != null){
@@ -218,10 +209,6 @@ public class TransactionList extends AppCompatActivity {
         });
 
         apiCallOnBrandType.execute(name);
-    }
-
-    private void setBrandNameFilter(String name){
-        brandFilter = name;
     }
 
 }

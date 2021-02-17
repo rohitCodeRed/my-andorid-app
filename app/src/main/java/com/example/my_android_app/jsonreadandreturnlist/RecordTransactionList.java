@@ -1,8 +1,6 @@
 package com.example.my_android_app.jsonreadandreturnlist;
 
 import com.example.my_android_app.transactionadapter.TransactionInfo;
-
-import java.util.ArrayList;
 import java.util.List;
 
 
@@ -31,37 +29,6 @@ public class RecordTransactionList {
     public List<TransactionInfo> getLoginInfo(){ return loginData; }
 
 
-
-    //Return the filtered data based upon filter "AccountType"
-
-    public List<TransactionInfo> getFilteredTransactionList(String field, String value){
-        int length = transactionList.size();
-        List<TransactionInfo> filteredList = new ArrayList<>();
-
-        for(int i=0;i< length;i++){
-            Boolean isMatched = false;
-            TransactionInfo info = transactionList.get(i);
-            switch(field){
-                case "ACCOUNT_TYPE":
-                        isMatched = isParameterValMatch(value,info.accountType);
-                    break;
-                case "ACCOUNT_NAME":
-                    isMatched = isParameterValMatch(value,info.accountType);
-                    break;
-            }
-
-            if(isMatched){
-                filteredList.add(info);
-            }
-
-        }
-
-
-        return filteredList;
-
-
-    }
-
     private Boolean isParameterValMatch(String queryVal, String listVal){
         return listVal.contains(queryVal);
     }
@@ -82,7 +49,4 @@ public class RecordTransactionList {
         return transactionList.get(index);
     }
 
-    public TransactionInfo getLoginInfoObject(){
-        return loginData.get(0);
-    }
 }

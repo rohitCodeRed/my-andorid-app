@@ -7,12 +7,12 @@
     <ImageView
         android:id="@+id/homeImage"
         android:layout_width="match_parent"
-        android:layout_height="110dp"
+        android:layout_height="200dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="0dp"
+        android:layout_marginStart="2dp"
         android:layout_marginTop="0dp"
-        android:background="@android:color/holo_green_dark" />
+        android:background="@drawable/gradient_background" />
 
     <TextView
         android:id="@+id/imageTextPrefix"
@@ -20,8 +20,8 @@
         android:layout_height="wrap_content"
         android:layout_alignBottom="@+id/homeImage"
         android:layout_alignParentStart="true"
-        android:layout_marginStart="128dp"
-        android:layout_marginBottom="40dp"
+        android:layout_marginStart="118dp"
+        android:layout_marginBottom="80dp"
         android:fontFamily="@font/montserrat"
         android:text="@string/image_text_prefix"
         android:textColor="@color/white"
@@ -32,7 +32,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignBottom="@+id/imageTextPrefix"
-        android:layout_marginStart="5dp"
+        android:layout_marginStart="8dp"
         android:layout_marginBottom="-4dp"
         android:layout_toEndOf="@+id/imageTextPrefix"
         android:fontFamily="@font/montserrat"

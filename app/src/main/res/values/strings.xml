@@ -1,58 +1,14 @@
 <resources>
     <!-- App Flavor -->
     <string name="app_name">My Android App</string>
-<!--    <string name="app_name_debug">OneApp SD</string>-->
-<!--    <string name="app_name_alpha">OneApp S</string>-->
-<!--    <string name="app_name_prerelease">OneApp D</string>-->
 
-    <!-- Facebook -->
-    <string name="facebook_app_id">695989350768444</string>
-    <string name="fb_login_protocol_scheme">fb695989350768444</string>
-
-    <!-- Text View -->
-    <string name="label_welcome">Welcome to\n<font size="40"><b><font fgcolor='#d1272a'>MY App</font></b></font></string>
-    <string name="label_password_description"><i>*Password should have at least 8 characters and must contain a combination of letters and numbers</i></string>
-    <string name="label_terms_and_conditions_title">Terms and Conditions</string>
-    <string name="label_terms_and_conditions_description">By accepting the terms of service of our\n<u><font fgcolor='#43B049'>Privacy Policy</font></u>, you agree to:</string>
-    <string name="label_terms_promos_and_loyalty_title">Promos &amp; Loyalty</string>
-    <string name="label_terms_promos_and_loyalty_content">Consent of subscriber to receive commercial and promotional advertisements from Smart, its subsidiaries and affiliates.</string>
-    <string name="label_terms_profiling_title">Profiling</string>
-    <string name="label_terms_profiling_content">Consent of subscriber to be profiled (based on interests, preferences, mobility patterns from physical locations and other information) for use of marketing and market research purposes.</string>
-    <string name="label_terms_third_party_title">Third Party Usage</string>
-    <string name="label_terms_third_party_content">Consent of subscriber to be profiled (based on interests, preferences, mobility patterns from physical locations and other information) for use of business partners and third-party service providers.</string>
-    <string name="label_terms_credit_scoring_title">Credit Scoring</string>
-    <string name="label_terms_credit_scoring_content">Consent of subscriber to share credit score (based on data collected internally within the PLDT group, its subsidiaries and affiliates) to third-party service providers.</string>
-    <string name="label_terms_advertisements_title">Advertisements</string>
-    <string name="label_terms_advertisements_content">Consent of subscriber to receive information on offers, promotions and advertisements from business partners and third-party service providers.</string>
-    
-    <!-- Button -->
-    <string name="label_register">Register</string>
     <string name="label_signin">Sign in</string>
-    <string name="label_tour">Take a Tour</string>
-    <string name="label_back">Go Back</string>
-    <string name="label_proceed">Proceed</string>
-    <string name="label_view">View</string>
-
-    <!-- Edit Text Hint -->
-
     <!-- Login Activity -->
-    <string name="hint_email">Enter your e-mail address or mobile number</string>
+    <string name="hint_email">Enter your user name</string>
     <string name="hint_password">Enter your password</string>
-    <string name="hint_confirm_password">Confirm your password</string>
-    <string name="login_facebook_button_text">Sign in using Facebook</string>
     <string name="login_google_button_text">Sign in using Google</string>
-    <string name="forgot_your_password">Forgot your password?</string>
-
-    <!-- Register Activity -->
 
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="home_page_image">Home page Image</string>
-    <string name="user_login">You are logged in with</string>
-    <string name="account_enroll">Other enrolled accounts</string>
-    <string name="option_all">All</string>
-    <string name="option_pldt">PLDT</string>
-    <string name="option_smart">Smart</string>
     <string name="drag_option">Drag card to change order</string>
     <string name="acount_type">Smart Postpaid</string>
     <string name="user_acount_name">Dominics Personal Account</string>
@@ -63,50 +19,10 @@
     <string name="amount_suffix">P</string>
     <string name="date_text">As of today 4:56 PM</string>
     <string name="view_account">View Account</string>
-    <string name="page_name">Dashboard</string>
-    <string name="manage_account">Manage Account</string>
     <string name="view_account_details">View Account Details</string>
-    <string name="pay_bill">Pay Bill</string>
-    <string name="postpaid_view_breakdown">View breakdown > </string>
-    <string name="e_statement">View eStatement</string>
-    <string name="bluetooth_text">BlueTooth</string>
-    <string name="person_text">Person</string>
-    <string name="my_add_ons">My Add-Ons</string>
-    <string name="add_add_ons">Add Add-Ons</string>
-
-
-    <!-- Add Ons screen text -->
-    <string name="selected_addon_subject">Surf Max 995</string>
-    <string name="selected_addon_description">Smart Surf Max is the newest internet offer that allow you to surf all day</string>
-    <string name="selected_addon_btn_buy">Buy Now</string>
-    <string name="selected_addon_btn_send">Send Gift</string>
-
-    <!-- Labels -->
-    <string name="label_get_started">Get Started</string>
-
-    <string name="agree_terms_and_conditions">I agree to the <u><font fgcolor='#43B049'>Terms and Conditions</font></u>.</string>
-
-    <string name="pldt_terms_and_conditions_1">Hello</string>
-
-
-    <!-- tags-->
-    <string name="arrow_status">collapse</string>
-    <string name="activity_code">none</string>
-    <string name="file_path">path</string>
-
-    <!--  Auto debit enrollment text-->
-    <string name="auto_debit_text">Postpaid account subscribers may enroll their personnel credit cards(issued by Philippines banks only) to my PLDT Smart Auto Debit Agreement.If the name in the credit card to be enrolled does not match the name of the postpaid account holder, subscriber may visit the nearest Smart or PLDT store to apply.</string>
-
-    <!-- Array of string for reasons-->
-    <string-array name="reasons">
-        <item>none</item>
-        <item>Reason1</item>
-        <item>Reason2</item>
-        <item>Reason3</item>
-    </string-array>
 
     <string name="image_text_prefix">Hey,</string>
-    <string name="image_user_name">Dominic!</string>
+    <string name="image_user_name">You!</string>
     <string name="notification_bar">bell</string>
 
     <string name="server_client_id">649689455351-c8spjo6mqgqhkn5p8gt31eh14tjm8si0.apps.googleusercontent.com</string>

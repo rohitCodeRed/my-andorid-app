@@ -1,15 +1,4 @@
 {
-  "Name": "Dominic Velasquez",
-  "AccountId": 71192012,
-  "EmailAddress": "dominic.velasquez@gmail.com",
-  "MobileNumber": "09991653476",
-  "LoggedInAccount": {
-    "BrandType": "Smart",
-    "AccountType": "Postpaid",
-    "AccountName": "Dominic's Personal Account",
-    "TotalAmount": 2999,
-    "PaymentDue": "2018-10-30 00:00"
-  },
   "CurrentIndex": 3,
   "UserAccount": {
     "3": {
