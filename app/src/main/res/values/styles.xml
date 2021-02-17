@@ -3,6 +3,7 @@
     <style name="AppBaseTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- App Color -->
         <item name="colorPrimary">@color/smartPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/grey_500</item>
     </style>
 
@@ -59,6 +60,12 @@
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
     </style>
+
+
+<!--    <style name="SplashScreenTheme" parent = "Theme.AppCompat.Light.NoActionBar">-->
+<!--    <item  name="android:windowBackground">@drawable/src_background_splash</item>-->
+<!--    </style>-->
+
 
 
 </resources>

@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/transaction_view"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="15dp"
+    android:visibility="visible"
+    card_view:cardCornerRadius="4dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="13dp"
+        android:visibility="visible">
+
+        <TextView
+            android:id="@+id/accountType"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="10dp"
+            android:background="@color/deep_orange_500"
+
+            android:gravity="center_vertical"
+            android:paddingStart="15dp"
+            android:paddingTop="3dp"
+            android:paddingEnd="20dp"
+            android:paddingBottom="5dp"
+            android:text="@string/acount_type"
+            android:textColor="@android:color/white"
+            android:textSize="12sp" />
+
+
+        <ImageButton
+            android:id="@+id/settingBtn"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="3dp"
+            android:background="@color/white"
+            card_view:srcCompat="@drawable/ic_settings_black_24dp" />
+
+        <TextView
+            android:id="@+id/userAccountName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/accountType"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="14dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/montserrat"
+            android:text="@string/user_acount_name"
+            android:textColor="@color/dark_black"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <ImageButton
+            android:id="@+id/editNameBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/accountType"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="12dp"
+            android:layout_toEndOf="@+id/userAccountName"
+            android:background="@color/cardview_light_background"
+            card_view:srcCompat="@drawable/ic_edit_black_24dp" />
+
+        <TextView
+            android:id="@+id/paymentAmountText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/userAccountName"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="17dp"
+            android:layout_marginTop="21dp"
+            android:fontFamily="@font/montserrat"
+            android:text="@string/payment_amount_text"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/paymentDateText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/userAccountName"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="22dp"
+            android:layout_marginEnd="10dp"
+            android:fontFamily="@font/montserrat"
+            android:text="@string/payment_date_text"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/paymentDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/paymentDateText"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="11dp"
+            android:layout_marginEnd="10dp"
+            android:text="@string/payment_date"
+            android:textColor="@color/dark_black"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/paymentAmount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/paymentAmountText"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="27dp"
+            android:layout_marginTop="6dp"
+            android:text="@string/payment_amount"
+            android:textColor="@color/dark_black"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/amountSuffix"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_below="@+id/userAccountName"
+
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="17dp"
+            android:layout_marginTop="47dp"
+            android:text="@string/amount_suffix"
+            android:textColor="@color/dark_black"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/renewImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/paymentAmountText"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="14dp"
+            android:layout_marginTop="80dp"
+            card_view:srcCompat="@drawable/ic_refresh_black_24dp" />
+
+        <TextView
+            android:id="@+id/dateText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/paymentAmountText"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="86dp"
+
+            android:layout_toEndOf="@+id/renewImage"
+            android:text="@string/date_text"
+            android:textSize="12sp" />
+
+        <Button
+            android:id="@+id/viewAccount"
+            android:layout_width="wrap_content"
+            android:layout_height="36dp"
+            android:layout_below="@+id/paymentDateText"
+
+            android:layout_alignBaseline="@+id/dateText"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="69dp"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/button_corner"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:text="@string/view_account"
+            android:textAlignment="center"
+            android:textColor="@color/cardview_light_background"
+            android:textSize="12sp" />
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_below="@+id/userAccountName"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="14dp"
+            android:layout_marginTop="93dp"
+            android:layout_marginEnd="15dp"
+            android:background="@color/focus" />
+
+    </RelativeLayout>
+
+
+</androidx.cardview.widget.CardView>

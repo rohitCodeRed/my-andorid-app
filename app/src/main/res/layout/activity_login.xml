@@ -15,7 +15,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="48dp"
         android:text="Sign in to My App"
-        android:textSize="@dimen/typography_title"
+        android:textSize="24dp"
         app:layout_constraintBottom_toTopOf="@+id/etEmail"
         app:layout_constraintEnd_toEndOf="@+id/etEmail"
         app:layout_constraintStart_toStartOf="@+id/etEmail" />
@@ -37,6 +37,7 @@
             android:layout_height="match_parent"
             android:hint="@string/hint_email"
             android:inputType="textEmailAddress"
+            android:id="@+id/user_name"
             android:textSize="@dimen/typography_input" />
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -54,6 +55,7 @@
             android:layout_height="match_parent"
             android:hint="@string/hint_password"
             android:inputType="textPassword"
+            android:id="@+id/password"
             android:textSize="@dimen/typography_input" />
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -192,8 +194,8 @@
 
     <com.google.android.gms.common.SignInButton
         android:id="@+id/sign_in_button"
-        android:layout_width="109dp"
-        android:layout_height="47dp"
+        android:layout_width="140dp"
+        android:layout_height="52dp"
         android:layout_marginTop="48dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

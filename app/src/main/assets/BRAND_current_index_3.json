@@ -1,0 +1,28 @@
+{
+  "CurrentIndex": 3,
+  "UserAccount": {
+    "3": {
+      "BrandType": "Sun",
+      "AccountType": "Prepaid",
+      "AccountName": "Dominic's Sun Account",
+      "MobileNumber": "09315347657",
+      "TotalAmount": 300
+    },
+    "4": {
+      "BrandType": "Smart",
+      "AccountType": "Prepaid",
+      "AccountName": "Smart Prepaid Account",
+      "MobileNumber": "09831764567",
+      "TotalAmount": 500
+    },
+    "5": {
+      "BrandType": "PLDT",
+      "AccountType": "Postpaid",
+      "AccountName": "Domino's Broadband Account",
+      "AccountId": 64534534,
+      "EmailAddress": "dominov@protonmail.com",
+      "TotalAmount": 2999,
+      "PaymentDue": "2018-10-30 00:00"
+    }
+  }
+}
