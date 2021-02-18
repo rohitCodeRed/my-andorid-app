@@ -2,33 +2,33 @@
   "CurrentIndex": 0,
   "UserAccount": {
     "0": {
-      "BrandType": "Smart",
+      "BrandType": "Brand1",
       "AccountType": "Postpaid",
-      "AccountName": "Dominic's Personal Account",
+      "AccountName": "User's Personal Account 1",
       "MobileNumber": "09912353786",
       "TotalAmount": 2999,
-      "EmailAddress": "dominic.velasquez@gmail.com",
+      "EmailAddress": "user@gmail.com",
       "AccountId": 71192012,
-      "PaymentDue": "2018-10-30 00:00"
+      "PaymentDue": "2021-01-30 00:00"
     },
     "1": {
-      "BrandType": "TNT",
+      "BrandType": "Brand2",
       "AccountType": "Prepaid",
       "MobileNumber": "09921538765",
-      "AccountName": "Dominic's Prepaid Account",
+      "AccountName": "User's Prepaid Account 2",
       "TotalAmount": 500,
-      "EmailAddress": "dominic.velasquez@gmail.com",
+      "EmailAddress": "user@gmail.com",
       "AccountId": 71192012
     },
     "2": {
-      "BrandType": "PLDT",
+      "BrandType": "Brand3",
       "AccountType": "Postpaid",
       "AccountId": 5432342,
       "MobileNumber": "09921538765",
-      "EmailAddress": "dominic.velasquez@gmail.com",
-      "AccountName": "Dominic's Broadband Account",
+      "EmailAddress": "user@gmail.com",
+      "AccountName": "User's Prepaid Account 3",
       "TotalAmount": 3599,
-      "PaymentDue": "2018-10-30 00:00"
+      "PaymentDue": "2021-01-30 00:00"
     }
   }
 }

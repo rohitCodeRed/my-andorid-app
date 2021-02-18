@@ -23,17 +23,17 @@ import java.util.List;
 
 public class TransactionList extends AppCompatActivity {
     private static final String TAG ="Transaction activity" ;
+    public static final String BRAND_TYPE = "none";
+    public static final String ACCOUNT_NAME = "none";
+    public static final String TOTAL_AMOUNT = "0";
     private static String brandName = "BRAND";
 
     public static final String ACCOUNT_TYPE = "none";
-    public static final String MOBILE_NUMBER ="none";
-    public static final String ACCOUNT_ID = "0";
-    public static final String EMAIL_ID ="none";
     public Boolean isLoaded = false;
 
     private RecyclerView rvView;
     private ProgressBar pbView;
-    private RecordTransactionList rtList;
+    public RecordTransactionList rtList;
     private TransactionAdapter taView;
 
 
@@ -51,6 +51,7 @@ public class TransactionList extends AppCompatActivity {
         initializeScrollEvent();
         initializeAdapterView();
         setApiCallOnBrandTypeApi(brandName);
+
 
     }
     
@@ -144,6 +145,7 @@ public class TransactionList extends AppCompatActivity {
                 //After getting the position of card from where view button is clicked,
                 //it will call RecordTransactionList.getTransactionInfo function.
                 //then call startDashBoardActivityOnViewButtonRecyclerView with TransactionInfo object.
+                //Log(TAG,v.findViewById(R.id.userAccountName).getContext())
                 TransactionInfo tiList ;
                 tiList = rtList.getTransactionInfo(position);
                 startDashBoardActivityOnViewButtonRecyclerView(tiList);
@@ -160,23 +162,23 @@ public class TransactionList extends AppCompatActivity {
 
     //This function will call when view button is click form recycler view child items
     private void startDashBoardActivityOnViewButtonRecyclerView(TransactionInfo tiList){
-        Intent intent = new Intent(this, DashboardActivity.class);
-        if(tiList.accountEmailId != null){
-            intent.putExtra(EMAIL_ID,tiList.accountEmailId);
+        Intent intent = new Intent(this, SelectedTransactionInfo.class);
+        if(tiList.brandType != null){
+            intent.putExtra(BRAND_TYPE,tiList.brandType);
         }else{
-            intent.putExtra(EMAIL_ID,"none");
+            intent.putExtra(BRAND_TYPE,"none");
         }
         intent.putExtra(ACCOUNT_TYPE, tiList.accountType);
 
-        if(tiList.accountMobileNumber != null){
-            intent.putExtra(MOBILE_NUMBER,tiList.accountMobileNumber);
+        if(tiList.accountName != null){
+            intent.putExtra(ACCOUNT_NAME,tiList.accountName);
         }else{
-            intent.putExtra(MOBILE_NUMBER,"none");
+            intent.putExtra(ACCOUNT_NAME,"none");
         }
-        if(tiList.accountId != 0){
-            intent.putExtra(ACCOUNT_ID,String.valueOf(tiList.accountId));
+        if(tiList.totalAmount != 0){
+            intent.putExtra(TOTAL_AMOUNT,String.valueOf(tiList.totalAmount));
         }else{
-            intent.putExtra(ACCOUNT_ID,"none");
+            intent.putExtra(TOTAL_AMOUNT,"none");
         }
 
         //intent.putExtra(MOBILE_NUMBER,tiList.accountMobileNumber);

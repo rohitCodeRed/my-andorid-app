@@ -75,12 +75,12 @@ public class MainActivity extends AppCompatActivity {
 
     private DrawerLayout mDrawerLayout;
     private RecyclerView rvView;
-    private RecordTransactionList rtList;
+    //private RecordTransactionList rtList;
     private TransactionAdapter taView;
 
 
     private NavigationView navigationView;
-    Intent transactionActivity,logOutAcitivity ;
+    Intent transactionActivity,logOutAcitivity,animationViewActivity ;
     String currentPhotoPath;
     private TextView usernameText;
 
@@ -91,11 +91,12 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         //rtList is instance of class RecordTransactionList, which record all the json data in list.
-        this.rtList = new RecordTransactionList();
+        //this.rtList = new RecordTransactionList();
 //        pImageView = findViewById(R.id.profile_foreground_image);
 
         transactionActivity = new Intent(this, TransactionList.class);
         logOutAcitivity = new Intent(this, LoginActivity.class);
+        animationViewActivity = new Intent(this,DampingBallAnimationActivity.class);
 
         Intent intent = getIntent();
         USER_NAME = intent.getStringExtra(LoginActivity.USER_NAME);
@@ -184,6 +185,7 @@ public class MainActivity extends AppCompatActivity {
                                 break;
                             case R.id.nav_animation_view:
                                 mDrawerLayout.closeDrawers();
+                                startActivity(animationViewActivity);
                                 break;
                             case R.id.log_out:
                                 mDrawerLayout.closeDrawers();
