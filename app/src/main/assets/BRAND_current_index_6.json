@@ -2,27 +2,27 @@
   "CurrentIndex": 6,
   "UserAccount": {
     "6": {
-      "BrandType": "Smart",
+      "BrandType": "Brand2",
       "AccountType": "Prepaid",
       "MobileNumber": "09126452341",
-      "EmailAddress": "dominica.hello@gmail.com",
-      "AccountName": "Dominica's Prepaid Account",
+      "EmailAddress": "user.hello@gmail.com",
+      "AccountName": "User's Prepaid Account",
       "TotalAmount": 1599
     },
     "7": {
-      "BrandType": "Smart",
+      "BrandType": "Brand3",
       "AccountType": "Postpaid",
-      "AccountName": "Lanie's Personal Account",
+      "AccountName": "User's Personal Account",
       "MobileNumber": "09127563534",
-      "EmailAddress": "lanie.g@yahoo.com",
+      "EmailAddress": "user.g@yahoo.com",
       "TotalAmount": 699,
-      "PaymentDue": "2018-11-20 00:00"
+      "PaymentDue": "2021-01-20 00:00"
     },
     "8": {
-      "BrandType": "TNT",
+      "BrandType": "Brand1",
       "AccountType": "Prepaid",
       "MobileNumber": "09234765645",
-      "AccountName": "Allen Prepaid Account",
+      "AccountName": "User's Prepaid Account",
       "TotalAmount": 100
     }
   }

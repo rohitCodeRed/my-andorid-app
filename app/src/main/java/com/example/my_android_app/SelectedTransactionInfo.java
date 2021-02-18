@@ -8,9 +8,8 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
 
-public class DashboardActivity extends AppCompatActivity {
+public class SelectedTransactionInfo extends AppCompatActivity {
     public static final String TAG = "MyApp";
 
 
@@ -18,14 +17,15 @@ public class DashboardActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.dashboard_layout);
+        setContentView(R.layout.selected_transaction_layout);
+        ActionBar actionbar = getSupportActionBar();
+        actionbar.setTitle("Transaction Info");
 
 
         Intent intent = getIntent();
-        String message = "AccountType: "+intent.getStringExtra(MainActivity.ACCOUNT_TYPE)+
-                            "\nAccountId: "+intent.getStringExtra(MainActivity.ACCOUNT_ID)+
-                            "\nMobileNumber: "+intent.getStringExtra(MainActivity.MOBILE_NUMBER)+
-                            "\nEmailId: "+intent.getStringExtra(MainActivity.EMAIL_ID);
+        String message =
+                            "\nAccount Name: "+intent.getStringExtra(TransactionList.ACCOUNT_NAME)+
+                            "\nTotal Amount: "+intent.getStringExtra(TransactionList.TOTAL_AMOUNT);
         TextView textView = findViewById(R.id.textViewDash);
         textView.setText(message);
     }

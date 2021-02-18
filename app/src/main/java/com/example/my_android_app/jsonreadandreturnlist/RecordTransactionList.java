@@ -11,8 +11,8 @@ import java.util.List;
 //'transactionList' have the list of data related to brand name.
 
 public class RecordTransactionList {
-    private static List<TransactionInfo> transactionList;
-    private static List<TransactionInfo> loginData;
+    public static List<TransactionInfo> transactionList;
+    public static List<TransactionInfo> loginData;
 
     public void updateTransactionInfoList(List<TransactionInfo> list){
         transactionList = list;

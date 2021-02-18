@@ -73,8 +73,8 @@ public class RestApiCallOnScroll extends AsyncTask<String, Integer, String> {
         }
         catch(JSONException | InterruptedException e){
             //e.printStackTrace();
-            csList.appendList(null);
-            chunkList = null;
+            //csList.appendList(null);
+            //chunkList = null;
         }
 
 

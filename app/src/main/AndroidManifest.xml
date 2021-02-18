@@ -44,7 +44,7 @@
                 android:value=".MainActivity" />
         </activity>
         <activity
-            android:name=".DashboardActivity"
+            android:name=".SelectedTransactionInfo"
             android:parentActivityName=".TransactionList">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -57,8 +57,20 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <activity android:name=".login.LoginActivity"></activity>
         <activity android:name=".BaseActivity" />
+
+        <activity android:name=".DampingBallAnimationActivity" android:parentActivityName=".MainActivity">
+        <meta-data
+            android:name="android.support.PARENT_ACTIVITY"
+            android:value=".MainActivity" />
+        </activity>
+        <activity android:name=".CustomViewActivity" android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
     </application>
 
 </manifest>
