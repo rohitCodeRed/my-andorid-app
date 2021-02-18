@@ -24,7 +24,7 @@ public class SplashActivity extends BaseActivity {
 
        @Override
        public void run() {
-           getWindow().setDecorFitsSystemWindows(false);
+           //getWindow().setDecorFitsSystemWindows(false);
        }
    };
 
@@ -62,7 +62,7 @@ public class SplashActivity extends BaseActivity {
 
        mControlView = findViewById(R.id.fullscreen_content_controls);
        mContentView = findViewById(R.id.fullscreen_content);
-       getWindow().setDecorFitsSystemWindows(false);
+       //getWindow().setDecorFitsSystemWindows(false);
 
        mHandler.removeCallbacks(mHidePartRunnable);
        mHandler.postDelayed(mShowPartRunnable, SPLASH_DELAY);
