@@ -12,6 +12,17 @@ It's native **Android** app with some basic features. Some of the features are:
 * Animation View - It's basic animation view with bouncing ball.
 * Log Out - it logged the loggedIn user.
 
+
+## My Andoroid app GIF
+![my-android-app](https://user-images.githubusercontent.com/35483024/108508498-ecbdc580-72e1-11eb-8643-9219588ac8b8.gif)
+
+
+
+
+  
+  
+  
+
 ## Some snapshots
 ![LoginWithGoogle](https://user-images.githubusercontent.com/35483024/108367907-e5ce7e80-721f-11eb-9f7b-aea7c6da2436.jpg)
 ![drawerLayout2](https://user-images.githubusercontent.com/35483024/108367996-faab1200-721f-11eb-9075-62d41f3562df.jpg)
@@ -24,7 +35,5 @@ It's native **Android** app with some basic features. Some of the features are:
 
 
 
-## My Andoroid app GIF
-![my-android-app](https://user-images.githubusercontent.com/35483024/108508498-ecbdc580-72e1-11eb-8643-9219588ac8b8.gif)
 
 
